@@ -16,7 +16,8 @@ def scraiping(type):
   try:
     # FileDownloadインスタンス化
     file_download = FileDownload(type)
-    if (type == 'Kyi' or type == 'Sed' or type == 'Ukc' or type == 'Bac' or type == 'Kab' or type == 'Cyb'):
+    if (type == 'Kyi' or type == 'Sed' or type == 'Ukc'
+            or type == 'Bac' or type == 'Kab' or type == 'Cyb' or type == 'Hjc'):
       file_download.download()
     else:
       file_download.downloadLatest()

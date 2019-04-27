@@ -40,13 +40,13 @@ class FileDownload:
     time.sleep(3)
 
   def download(self):
-    #各データのダウンロード画面を表示
+    # 各データのダウンロード画面を表示
     self.driver.get('http://www.jrdb.com/member/datazip/' + self.type + '/index.html')
     time.sleep(3)
 
     # 単体データコーナーの最新のファイルを入手
     ul = self.driver.find_elements_by_tag_name('ul')[1]
-    for i in range(0, 2):
+    for i in range(0, 3):
       li = ul.find_elements_by_tag_name('li')[i]
       li.find_elements_by_tag_name('a')[0].click()
       # ファイル名取得
